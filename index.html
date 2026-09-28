@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tédio Zero · 30 brincadeiras de casa para os 2 aos 4 anos</title>
+<meta name="description" content="Guia digital com 30 brincadeiras prontas para crianças de 2 a 4 anos, usando materiais que você já tem em casa. De R$69 por R$29,90.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --terracota:#D9714A;
+    --salvia:#6E8C6B;
+    --mostarda:#D9A441;
+    --azul:#5B7C99;
+    --creme:#FAF3EA;
+    --tinta:#2E2A25;
+    --tinta-suave:#4A4238;
+    --linha:#E7D9C8;
+    --cinza-suave:#8a7c6c;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:var(--creme);
+    color:var(--tinta);
+    line-height:1.6;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Lora',serif; margin:0; color:var(--tinta);}
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 20px;}
+  .wrap-narrow{max-width:760px; margin:0 auto; padding:0 20px;}
+
+  /* -------- NAV -------- */
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 20px; max-width:1100px; margin:0 auto;
+  }
+  .nav-brand{font-family:'Lora',serif; font-style:italic; font-size:16px; color:var(--tinta-suave);}
+  .nav-handle{font-size:13px; color:var(--cinza-suave);}
+
+  /* -------- BUTTON -------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    background:var(--terracota); color:#fff; font-weight:600; font-size:17px;
+    padding:16px 32px; border-radius:40px; text-decoration:none;
+    box-shadow:0 10px 24px -8px rgba(217,113,74,0.55);
+    border:none; cursor:pointer; transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px); box-shadow:0 14px 28px -8px rgba(217,113,74,0.6);}
+  .btn-light{
+    background:#fff; color:var(--terracota);
+    box-shadow:0 10px 24px -8px rgba(46,42,37,0.35);
+  }
+  .btn-light:hover{box-shadow:0 14px 28px -8px rgba(46,42,37,0.4);}
+  .btn-wrap{
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+    width:100%;
+  }
+  .btn-trust{font-size:12.5px; color:var(--cinza-suave); text-align:center;}
+  .section-cta{
+    margin-top:28px; display:flex; flex-direction:column; align-items:center; gap:10px;
+    width:100%;
+  }
+  .section-cta .btn-trust{text-align:center;}
+
+  /* -------- HERO -------- */
+  .hero{padding:28px 0 56px;}
+  .hero-grid{
+    display:grid; grid-template-columns:1fr; gap:40px; align-items:center;
+  }
+  .hero-kicker{
+    font-size:12.5px; letter-spacing:2px; font-weight:700; color:var(--terracota);
+    margin-bottom:14px; text-transform:uppercase;
+  }
+  .hero h1{font-size:33px; line-height:1.22; margin-bottom:16px;}
+  .hero-sub{font-size:16.5px; color:var(--tinta-suave); margin-bottom:22px; max-width:520px;}
+  .price-block{
+    display:flex; align-items:baseline; gap:10px; margin-bottom:22px; flex-wrap:wrap;
+  }
+  .price-old{font-size:16px; color:var(--cinza-suave); text-decoration:line-through;}
+  .price-new{font-size:32px; font-weight:700; font-family:'Lora',serif; color:var(--tinta);}
+  .price-tag{
+    font-size:11.5px; font-weight:700; letter-spacing:0.5px; color:#fff; background:var(--salvia);
+    padding:4px 10px; border-radius:20px; text-transform:uppercase;
+  }
+  .hero-visual{position:relative; padding:40px 28px 36px;}
+  .hero-visual .stack{
+    position:relative; max-width:300px; margin:0 auto;
+    cursor:pointer;
+  }
+  .hero-visual .stack img{
+    border-radius:10px; box-shadow:0 24px 50px -18px rgba(46,42,37,0.35); width:100%;
+    transition:transform .45s cubic-bezier(.22,.68,0,1.2), box-shadow .45s ease;
+    will-change:transform;
+  }
+  .hero-visual .back1{
+    position:absolute; top:-20px; right:-20px; width:66%; z-index:0;
+    transform:rotate(9deg) translate(0,0);
+  }
+  .hero-visual .back2{
+    position:absolute; bottom:-24px; left:-22px; width:60%; z-index:0;
+    transform:rotate(-11deg) translate(0,0);
+  }
+  .hero-visual .front{
+    position:relative; z-index:1;
+    transform:rotate(-2deg) translate(0,0);
+  }
+  @media (hover:hover) and (pointer:fine){
+    .hero-visual .stack:hover .back1,
+    .hero-visual .stack:focus-within .back1{
+      transform:rotate(18deg) translate(28px,-22px) scale(1.02);
+      box-shadow:0 28px 56px -16px rgba(46,42,37,0.4);
+    }
+    .hero-visual .stack:hover .back2,
+    .hero-visual .stack:focus-within .back2{
+      transform:rotate(-20deg) translate(-30px,26px) scale(1.02);
+      box-shadow:0 28px 56px -16px rgba(46,42,37,0.4);
+    }
+    .hero-visual .stack:hover .front,
+    .hero-visual .stack:focus-within .front{
+      transform:rotate(0deg) translateY(-10px) scale(1.04);
+      box-shadow:0 32px 60px -14px rgba(46,42,37,0.45);
+    }
+  }
+
+  /* -------- SECTION SHELL -------- */
+  section{padding:52px 0;}
+  .eyebrow{
+    font-size:12px; letter-spacing:2px; font-weight:700; color:var(--terracota);
+    text-transform:uppercase; margin-bottom:10px;
+  }
+  .section-title{font-size:27px; margin-bottom:14px; line-height:1.25;}
+  .section-lead{color:var(--tinta-suave); font-size:15.5px; max-width:620px; margin-bottom:8px;}
+
+  /* -------- PROBLEM -------- */
+  .problem{background:#fff;}
+  .problem-list{list-style:none; margin:26px 0 0; padding:0; display:flex; flex-direction:column; gap:14px;}
+  .problem-list li{
+    display:flex; gap:12px; font-size:15.5px; color:var(--tinta-suave);
+    background:var(--creme); border:1px solid var(--linha); border-radius:12px; padding:14px 16px;
+  }
+  .problem-list li::before{content:"•"; color:var(--terracota); font-weight:700; flex:none;}
+  .problem-note{
+    margin-top:22px; font-size:15px; color:var(--tinta-suave); font-style:italic;
+    border-left:3px solid var(--salvia); padding-left:14px;
+  }
+
+  /* -------- BENEFITS -------- */
+  .benefits-grid{
+    margin-top:28px; display:grid; grid-template-columns:1fr; gap:14px;
+  }
+  .benefit{
+    display:flex; gap:14px; background:#fff; border:1px solid var(--linha);
+    border-radius:14px; padding:18px 18px;
+  }
+  .benefit-check{
+    flex:none; width:26px; height:26px; border-radius:50%; background:var(--salvia);
+    color:#fff; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700;
+  }
+  .benefit-title{font-weight:600; font-size:15.5px; margin-bottom:3px;}
+  .benefit-text{font-size:14px; color:var(--tinta-suave);}
+
+  /* -------- ORIGIN -------- */
+  .origin{background:var(--creme);}
+  .origin-box{
+    margin-top:22px; background:#fff; border:1px solid var(--linha); border-radius:16px;
+    padding:26px 24px;
+  }
+  .origin-box p{font-size:15.5px; color:var(--tinta-suave); margin:0 0 14px;}
+  .origin-box p:last-child{margin-bottom:0;}
+  .origin-sign{font-family:'Lora',serif; font-style:italic; color:var(--tinta); font-size:15px; margin-top:16px;}
+
+  /* -------- GALLERY -------- */
+  .gallery{background:#fff;}
+  .gallery-grid{
+    margin-top:28px; display:grid; grid-template-columns:repeat(2,1fr); gap:14px;
+  }
+  .gallery-grid figure{margin:0;}
+  .gallery-grid img{border-radius:10px; box-shadow:0 14px 30px -14px rgba(46,42,37,0.3);}
+  .gallery-grid figcaption{font-size:12.5px; color:var(--cinza-suave); margin-top:6px; text-align:center;}
+
+  /* -------- STEPS -------- */
+  .steps{display:grid; grid-template-columns:1fr; gap:18px; margin-top:28px;}
+  .step{display:flex; gap:14px; align-items:flex-start;}
+  .step-num{
+    flex:none; width:34px; height:34px; border-radius:50%; background:var(--mostarda); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-family:'Lora',serif; font-weight:700;
+  }
+  .step-title{font-weight:600; margin-bottom:2px; font-size:15.5px;}
+  .step-text{font-size:14px; color:var(--tinta-suave);}
+
+  /* -------- PRICE WHY -------- */
+  .why{background:var(--terracota); color:#fff;}
+  .why .eyebrow{color:#FBD9C6;}
+  .why h2{color:#fff;}
+  .why p{color:rgba(255,255,255,0.92); font-size:15.5px; max-width:640px;}
+  .why-recap{
+    margin-top:26px; display:flex; flex-wrap:wrap; gap:10px;
+  }
+  .why-recap span{
+    background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.3);
+    padding:7px 14px; border-radius:20px; font-size:13px;
+  }
+
+  /* -------- FOR WHOM -------- */
+  .whom-grid{margin-top:28px; display:grid; grid-template-columns:1fr; gap:14px;}
+  .whom-card{
+    background:var(--creme); border:1px solid var(--linha); border-radius:14px; padding:16px 18px;
+  }
+  .whom-q{font-weight:600; color:var(--azul); font-size:14.5px; margin-bottom:5px;}
+  .whom-a{font-size:14.5px; color:var(--tinta-suave);}
+
+  /* -------- TRUST -------- */
+  .trust{background:#fff;}
+  .trust-box{
+    margin-top:24px; background:var(--creme); border:1px solid var(--linha); border-radius:16px;
+    padding:22px 20px; display:flex; gap:14px; align-items:flex-start;
+  }
+  .trust-icon{
+    flex:none; width:38px; height:38px; border-radius:50%; background:var(--salvia); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:18px;
+  }
+  .trust-box p{margin:0; font-size:14.5px; color:var(--tinta-suave);}
+
+  /* -------- FAQ -------- */
+  .faq{margin-top:26px; display:flex; flex-direction:column; gap:10px;}
+  .faq-item{border:1px solid var(--linha); border-radius:12px; background:#fff; overflow:hidden;}
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; cursor:pointer;
+    padding:16px 18px; font-family:'Poppins',sans-serif; font-weight:600; font-size:15px; color:var(--tinta);
+    display:flex; justify-content:space-between; align-items:center; gap:10px;
+  }
+  .faq-q .plus{color:var(--terracota); font-size:20px; flex:none; transition:transform .2s ease;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .25s ease;}
+  .faq-a p{margin:0 18px 16px; font-size:14.5px; color:var(--tinta-suave);}
+
+  /* -------- FINAL CTA -------- */
+  .final-cta{
+    background:var(--tinta); color:#fff; text-align:center; border-radius:24px;
+    padding:44px 24px; margin:0 20px;
+  }
+  .final-cta h2{color:#fff; font-size:26px; margin-bottom:10px;}
+  .final-cta p{color:rgba(255,255,255,0.82); font-size:15px; margin-bottom:26px;}
+
+  /* -------- FOOTER -------- */
+  footer{padding:36px 0 48px; text-align:center;}
+  .footer-brand{font-family:'Lora',serif; font-style:italic; font-size:16px; color:var(--tinta-suave);}
+  .footer-handle{font-size:13px; color:var(--cinza-suave); margin-top:4px;}
+  .footer-legal{font-size:11.5px; color:#B0A18C; max-width:520px; margin:18px auto 0; line-height:1.6;}
+
+  /* -------- RESPONSIVE -------- */
+  @media (min-width:860px){
+    .hero-grid{grid-template-columns:1.05fr 0.95fr; gap:56px;}
+    .hero h1{font-size:43px;}
+    .hero-sub{font-size:17.5px;}
+    .section-title{font-size:32px;}
+    .benefits-grid{grid-template-columns:1fr 1fr;}
+    .gallery-grid{grid-template-columns:repeat(3,1fr);}
+    .steps{grid-template-columns:repeat(3,1fr);}
+    .whom-grid{grid-template-columns:1fr 1fr;}
+    .why-inner{display:flex; justify-content:space-between; align-items:flex-end; gap:30px;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="nav wrap">
+    <div class="nav-brand">Quintal de Dentro</div>
+    <div class="nav-handle">@quintal.de.dentro</div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="hero-kicker">Guia digital em PDF · 2 a 4 anos</div>
+        <h1>Pra próxima vez que ele disser "mamãe, não tenho o que fazer"</h1>
+        <p class="hero-sub">30 brincadeiras prontas pra estimular coordenação, concentração e imaginação, com o que já está espalhado pela sua casa agora. Sem procurar ideia no Pinterest às cinco da tarde, sem lista de compra, sem inventar na correria.</p>
+        <div class="price-block">
+          <span class="price-old">De R$69,00</span>
+          <span class="price-new">R$29,90</span>
+          <span class="price-tag">Preço de lançamento</span>
+        </div>
+        <div class="btn-wrap">
+          <a class="btn" href="https://pay.hotmart.com/W107748719N?checkoutMode=10" target="_blank" rel="noopener">Quero o Guia Tédio Zero</a>
+          <span class="btn-trust">Acesso imediato depois da compra. Abre no celular, tablet ou computador.</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="stack" tabindex="0" aria-label="Ilustrações do guia Tédio Zero">
+          <img class="back1" src="assets/hero_back1.jpg" alt="Ilustração de brincadeira do guia Tédio Zero">
+          <img class="back2" src="assets/hero_back2.jpg" alt="Ilustração de brincadeira do guia Tédio Zero">
+          <img class="front" src="assets/hero_front.jpg" alt="Ilustração de brincadeira do guia Tédio Zero">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem">
+    <div class="wrap-narrow">
+      <div class="eyebrow">Você já viveu isso?</div>
+      <h2 class="section-title">Cinco da tarde, a casa vira zona de guerra</h2>
+      <ul class="problem-list">
+        <li>A tela já passou do combinado e ainda faltam duas horas até o banho.</li>
+        <li>O "não tenho ideia" bate justo na hora em que você mais precisa de vinte minutos de paz.</li>
+        <li>Pinterest, YouTube e grupo de mães têm ideia demais, e nenhuma pronta pra usar agora.</li>
+        <li>O jantar não se faz sozinho, mas seu filho também não brinca sozinho.</li>
+      </ul>
+      <p class="problem-note">Não é falta de amor, nem falta de esforço. É falta de ideia na hora certa. Faltava um lugar pra buscar, direto, sem enrolação.</p>
+      <div class="section-cta">
+        <a class="btn" href="https://pay.hotmart.com/W107748719N?checkoutMode=10" target="_blank" rel="noopener">Quero o Guia Tédio Zero</a>
+        <span class="btn-trust">De R$69,00 por R$29,90 · Acesso imediato</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits">
+    <div class="wrap">
+      <div class="eyebrow">O que vem no guia</div>
+      <h2 class="section-title">Tudo pronto, só escolher e brincar</h2>
+      <p class="section-lead">Sem app, sem cadastro, sem anúncio no meio do caminho. Um PDF direto ao ponto.</p>
+      <div class="benefits-grid">
+        <div class="benefit">
+          <div class="benefit-check">✓</div>
+          <div>
+            <div class="benefit-title">30 brincadeiras prontas</div>
+            <div class="benefit-text">Sem precisar pesquisar nada na hora do desespero.</div>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-check">✓</div>
+          <div>
+            <div class="benefit-title">Materiais que já estão em casa</div>
+            <div class="benefit-text">Papelão, copo plástico, bolinha de ping-pong, fita adesiva e afins.</div>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-check">✓</div>
+          <div>
+            <div class="benefit-title">Passo a passo direto</div>
+            <div class="benefit-text">O que separar e o que fazer, nessa ordem, sem enrolação.</div>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-check">✓</div>
+          <div>
+            <div class="benefit-title">Organizado por objetivo</div>
+            <div class="benefit-text">Coordenação, concentração, imaginação e aprendizagem.</div>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-check">✓</div>
+          <div>
+            <div class="benefit-title">Idade e tempo de preparo</div>
+            <div class="benefit-text">Em cada atividade, pra você escolher rápido.</div>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-check">✓</div>
+          <div>
+            <div class="benefit-title">PDF no celular ou impresso</div>
+            <div class="benefit-text">Abre na hora no celular, ou imprime se preferir folhear.</div>
+          </div>
+        </div>
+        <div class="benefit">
+          <div class="benefit-check">✓</div>
+          <div>
+            <div class="benefit-title">Seu pra sempre</div>
+            <div class="benefit-text">Sem mensalidade e sem prazo de acesso.</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a class="btn" href="https://pay.hotmart.com/W107748719N?checkoutMode=10" target="_blank" rel="noopener">Quero o Guia Tédio Zero</a>
+        <span class="btn-trust">30 brincadeiras prontas · R$29,90</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORIGIN -->
+  <section class="origin">
+    <div class="wrap-narrow">
+      <div class="eyebrow">De onde veio o Tédio Zero</div>
+      <h2 class="section-title">Não nasceu de teoria, nasceu de correria de verdade</h2>
+      <div class="origin-box">
+        <p>Toda mãe que já ficou travada no meio da cozinha, com a criança puxando a barra da calça e nenhuma ideia na cabeça, conhece esse momento. Não é sobre não saber brincar. É sobre estar cansada demais pra inventar do zero, todo santo dia, com o jantar ainda por fazer.</p>
+        <p>O Quintal de Dentro nasceu pra resolver exatamente isso: uma lista pronta, testada em casas de verdade, com coisa que já está na sua gaveta. Nada de material caro, nada de pesquisa de trinta minutos pra achar uma ideia que talvez funcione.</p>
+        <p class="origin-sign">É o que a gente queria ter tido à mão nos dias difíceis. Agora é seu.</p>
+      </div>
+      <div class="section-cta">
+        <a class="btn" href="https://pay.hotmart.com/W107748719N?checkoutMode=10" target="_blank" rel="noopener">Quero o Guia Tédio Zero</a>
+        <span class="btn-trust">Acesso imediato depois da compra</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <div class="wrap">
+      <div class="eyebrow">Por dentro do guia</div>
+      <h2 class="section-title">Um gostinho do que te espera</h2>
+      <p class="section-lead">Cada brincadeira vem ilustrada, com idade indicada, tempo de preparo e o passo a passo completo.</p>
+      <div class="gallery-grid">
+        <figure>
+          <img src="assets/gal_1.jpg" alt="Pescaria de Bolinhas, brincadeira de coordenação motora">
+          <figcaption>Coordenação · Pescaria de Bolinhas</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/gal_2.jpg" alt="Alvo Certeiro de Papelão, brincadeira de coordenação motora">
+          <figcaption>Coordenação · Alvo Certeiro</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/gal_3.jpg" alt="Sequência de Cores, brincadeira de concentração">
+          <figcaption>Concentração · Sequência de Cores</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/gal_6.jpg" alt="Quebra-Cabeça de Papelão Caseiro, brincadeira de concentração">
+          <figcaption>Concentração · Quebra-Cabeça Caseiro</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/gal_4.jpg" alt="Restaurante de Mentirinha, brincadeira de imaginação">
+          <figcaption>Imaginação · Restaurante de Mentirinha</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/gal_5.jpg" alt="Capa de Super-Herói de Papel, brincadeira de imaginação">
+          <figcaption>Imaginação · Capa de Super-Herói</figcaption>
+        </figure>
+      </div>
+      <div class="section-cta">
+        <a class="btn" href="https://pay.hotmart.com/W107748719N?checkoutMode=10" target="_blank" rel="noopener">Quero o Guia Tédio Zero</a>
+        <span class="btn-trust">Ilustrações + passo a passo em cada brincadeira</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="steps-section">
+    <div class="wrap">
+      <div class="eyebrow">Como funciona</div>
+      <h2 class="section-title">Três passos até a primeira brincadeira</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">Compra segura</div>
+            <div class="step-text">Pelo link abaixo, em menos de 2 minutos.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">Acesso na hora</div>
+            <div class="step-text">O PDF chega por email e na tela de confirmação da compra.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">Escolha e brinque</div>
+            <div class="step-text">Abra no celular ou imprima, e sorteie a primeira atividade.</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a class="btn" href="https://pay.hotmart.com/W107748719N?checkoutMode=10" target="_blank" rel="noopener">Quero o Guia Tédio Zero</a>
+        <span class="btn-trust">Compra em menos de 2 minutos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY PRICE -->
+  <section class="why">
+    <div class="wrap why-inner">
+      <div>
+        <div class="eyebrow">Sobre o preço</div>
+        <h2 class="section-title">Por que R$29,90</h2>
+        <p>Uma hora de brinquedoteca já custa mais do que isso, e acaba assim que vocês saem pela porta. O Tédio Zero fica. É pra usar em qualquer tarde difícil, quantas vezes precisar, nos próximos anos, não só hoje. O preço de lançamento vale enquanto a coleção Quintal de Dentro ainda está sendo construída.</p>
+        <div class="why-recap">
+          <span>30 brincadeiras</span>
+          <span>4 áreas de estímulo</span>
+          <span>Acesso vitalício</span>
+          <span>Formato PDF</span>
+        </div>
+        <div class="section-cta">
+          <a class="btn btn-light" href="https://pay.hotmart.com/W107748719N?checkoutMode=10" target="_blank" rel="noopener">Quero o Guia Tédio Zero</a>
+          <span class="btn-trust" style="color:rgba(255,255,255,0.8);">Preço de lançamento · R$29,90</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR WHOM -->
+  <section class="whom">
+    <div class="wrap">
+      <div class="eyebrow">Para quem é</div>
+      <h2 class="section-title">Feito pra quem tem pouco tempo, não pouco amor</h2>
+      <div class="whom-grid">
+        <div class="whom-card">
+          <div class="whom-q">"Não sou criativa."</div>
+          <div class="whom-a">Não precisa ser. O guia já pensou a brincadeira por você.</div>
+        </div>
+        <div class="whom-card">
+          <div class="whom-q">"Não tenho grana pra brinquedo novo."</div>
+          <div class="whom-a">Os materiais são os que já sobram pela casa.</div>
+        </div>
+        <div class="whom-card">
+          <div class="whom-q">"Meu filho enjoa rápido."</div>
+          <div class="whom-a">São 30 opções diferentes. Sempre tem uma nova pra tentar.</div>
+        </div>
+        <div class="whom-card">
+          <div class="whom-q">"Não tenho paciência pra Pinterest."</div>
+          <div class="whom-a">Passo a passo direto, sem precisar montar nada complicado.</div>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a class="btn" href="https://pay.hotmart.com/W107748719N?checkoutMode=10" target="_blank" rel="noopener">Quero o Guia Tédio Zero</a>
+        <span class="btn-trust">Feito pra rotina real de casa</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="wrap-narrow">
+      <div class="eyebrow">Compra segura</div>
+      <h2 class="section-title">Sem risco pra você</h2>
+      <div class="trust-box">
+        <div class="trust-icon">✓</div>
+        <p>Pagamento processado com segurança. Como em qualquer compra digital no Brasil, você tem 7 dias de garantia, conforme o Código de Defesa do Consumidor, pra pedir reembolso sem burocracia.</p>
+      </div>
+      <div class="section-cta">
+        <a class="btn" href="https://pay.hotmart.com/W107748719N?checkoutMode=10" target="_blank" rel="noopener">Quero o Guia Tédio Zero</a>
+        <span class="btn-trust">7 dias de garantia · Pagamento seguro</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="wrap-narrow">
+      <div class="eyebrow">Perguntas frequentes</div>
+      <h2 class="section-title">Ainda com dúvida?</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-q">Em que formato o guia chega?<span class="plus">+</span></button>
+          <div class="faq-a"><p>Em PDF. Você pode abrir direto no celular, tablet ou computador, ou imprimir se preferir folhear no papel.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Funciona pra criança fora da faixa de 2 a 4 anos?<span class="plus">+</span></button>
+          <div class="faq-a"><p>A maioria das brincadeiras funciona também com crianças de 1 ano, com supervisão, e de 5 anos, com um pouco mais de desafio. A faixa indicada em cada atividade é só uma referência.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Preciso comprar algum material especial?<span class="plus">+</span></button>
+          <div class="faq-a"><p>Não. As 30 brincadeiras usam coisas que a maioria das casas já tem, como papelão, copo plástico, fita adesiva e bolinha de ping-pong.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">E se eu não souber por onde começar?<span class="plus">+</span></button>
+          <div class="faq-a"><p>O guia é organizado por objetivo (coordenação, concentração, imaginação e aprendizagem), com idade e tempo de preparo em cada página. É só abrir e escolher qualquer uma.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Como recebo o acesso depois de comprar?<span class="plus">+</span></button>
+          <div class="faq-a"><p>Na hora, por email e direto na tela de confirmação da compra.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">E se eu não gostar?<span class="plus">+</span></button>
+          <div class="faq-a"><p>Você tem 7 dias de garantia. É só pedir o reembolso, sem burocracia.</p></div>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a class="btn" href="https://pay.hotmart.com/W107748719N?checkoutMode=10" target="_blank" rel="noopener">Quero o Guia Tédio Zero</a>
+        <span class="btn-trust">Ainda com dúvida? O guia chega na hora</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section>
+    <div class="final-cta">
+      <h2>Guarde o próximo "não tenho o que fazer" na manga</h2>
+      <p>De R$69,00 por R$29,90. Acesso imediato depois da compra.</p>
+      <div class="btn-wrap">
+        <a class="btn" href="https://pay.hotmart.com/W107748719N?checkoutMode=10" target="_blank" rel="noopener">Quero o Guia Tédio Zero</a>
+        <span class="btn-trust" style="color:rgba(255,255,255,0.65);">Pagamento seguro · 7 dias de garantia</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">Quintal de Dentro</div>
+    <div class="footer-handle">@quintal.de.dentro</div>
+    <p class="footer-legal">Este material é educativo e não substitui a orientação de pediatras, psicólogos ou outros profissionais de saúde e educação infantil. © 2026 Quintal de Dentro. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-q').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var item = btn.closest('.faq-item');
+        var answer = item.querySelector('.faq-a');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(openItem){
+          if (openItem !== item){
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-a').style.maxHeight = null;
+          }
+        });
+        if (isOpen){
+          item.classList.remove('open');
+          answer.style.maxHeight = null;
+        } else {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
