@@ -15,6 +15,23 @@
   });
   gtag('config', 'G-ECWV0X3TMD', { transport_type: 'beacon' });
 </script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2440334190101246');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2440334190101246&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <title>Tédio Zero · 30 brincadeiras prontas para crianças de 2 a 4 anos | R$9,90</title>
 <meta name="description" content="30 brincadeiras com o que você já tem em casa, prontas em 1 a 15 minutos, com idade, passo a passo e por que cada uma ajuda no desenvolvimento. PDF com acesso imediato por R$9,90.">
 <link rel="canonical" href="https://tedio-zero-lp.vercel.app/">
@@ -956,7 +973,14 @@
     try { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); } catch (e) {}
   }
 
+  /* Meta Pixel: eventos padrão (otimizáveis) espelhando o GA4 */
+  function fb(name, params, custom) {
+    try { if (typeof window.fbq === 'function') window.fbq(custom ? 'trackCustom' : 'track', name, params || {}); } catch (e) {}
+  }
+  var FB_ITEM = { content_ids: ['tedio_zero_guia'], content_type: 'product', content_name: 'Tédio Zero - Guia Completo', value: 9.9, currency: 'BRL' };
+
   track('view_item', { currency: 'BRL', value: 9.9, items: [ITEM] });
+  fb('ViewContent', FB_ITEM);
 
   /* UTMs → Hotmart. Regras: só repassa UTMs que existem na URL; fallback meta/paid_social apenas com fbclid;
      nunca sobrescreve utm_content (criativo); CTA vai em sck, origem em src. */
@@ -990,6 +1014,7 @@
         link_domain: 'pay.hotmart.com'
       });
       track('begin_checkout', { currency: 'BRL', value: 9.9, items: [ITEM], cta_location: loc });
+      fb('InitiateCheckout', { content_ids: ['tedio_zero_guia'], content_type: 'product', num_items: 1, value: 9.9, currency: 'BRL' });
       if (loc === 'offer' || loc === 'sticky') {
         track('select_promotion', { promotion_id: 'oferta_990', creative_slot: loc, items: [ITEM] });
       }
@@ -1018,7 +1043,7 @@
     var h = document.documentElement;
     var max = h.scrollHeight - window.innerHeight;
     var pct = max > 0 ? (h.scrollTop || window.pageYOffset) / max * 100 : 100;
-    marks.forEach(function (m) { if (pct >= m && !sent[m]) { sent[m] = true; track('scroll_depth', { percent_scrolled: m }); } });
+    marks.forEach(function (m) { if (pct >= m && !sent[m]) { sent[m] = true; track('scroll_depth', { percent_scrolled: m }); if (m === 50 || m === 90) fb('Scroll' + m, {}, true); } });
   }
   window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(checkScroll); } }, { passive: true });
 
@@ -1034,6 +1059,7 @@
         track('section_view', { section_id: id, section_index: Number(s.dataset.sectionIndex) || null });
         if (id === 'offer') {
           track('pricing_view', { section_id: id });
+          fb('PricingView', {}, true);
           track('view_promotion', { promotion_id: 'oferta_990', promotion_name: 'Tédio Zero R$9,90', creative_slot: 'offer', items: [ITEM] });
         }
         io.unobserve(s);
